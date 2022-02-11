@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: Lato;
+}
+
+.showcase{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    z-index: 3;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 10%;
+    align-items:center;
+    color: white;
+    transition: 0.7s
+}
+
+.showcase.active{
+    right: 300px;
+}
+
+.showcase header{
+    position: absolute;
+    padding: 30px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    z-index: 1000;
+}
+
+.logo{
+    cursor: pointer;
+}
+
+.toggle{
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.5em
+}
+
+.toggle.active{
+    display: none;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+}
+
+.text{
+    position:relative;
+    opacity: 1;
+    z-index: 3;
+    background-blend-mode: overlay;
+}
+
+h2{
+    font-size: 5em;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h3{
+    font-size: 2em;
+    font-weight: 400;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    background: aqua;
+    z-index: 3;
+    mix-blend-mode: overlay;
+    opacity: 0.5;
+}
+
+.text p{
+    font-size: 1.1em;
+    padding-top: 20px;
+    max-width: 700px;
+}
+
+a {
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: 10px 30px;
+    margin: 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: 0.2s;
+    border-radius: .45rem;
+}
+
+.text a:hover{
+    letter-spacing: 0.5em;
+    margin: 40px 20px;
+    cursor: pointer;
+}
+
+.social {
+    position: absolute;
+    bottom: 30px;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social li{
+    list-style: none;
+    margin: 5px;
+    cursor: pointer;
+    background:bisque;
+    color: black;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 0.35rem;
+    letter-spacing: 1px;
+    scale: 0.8;
+    transition: 0.2s;
+}
+
+.social li:hover{
+    scale: 1;
+    background:rgb(255, 255, 255);
+}
+
+.menu{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    color: black;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item{
+    list-style: none;
+    font-size: 30px;
+    margin: 20px;
+    font-weight: 300;
+    transition: 0.2s;
+}
+
+.menu-item:hover{
+    cursor: pointer;
+    color: aqua
+}
+
+.close{
+    position: absolute;
+    top:0;
+    right: 0;
+    margin: 30px;
+    color: black;
+    font-size: 1.5em;
+    z-index: 3
+}
+
+.close:hover{
+    cursor:pointer;
+    
+}
+
+@media (max-width: 800px){
+    .text{
+        font-size: 0.8em;
+    }
+}
